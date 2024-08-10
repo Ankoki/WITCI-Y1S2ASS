@@ -43,7 +43,7 @@ function nextQuestion() {
     const next = quizData[currentQuestion];
     question.innerHTML = `<h1>${next.question}</h1>`;
     options.innerHTML = "";
-    next.options.forEach(option => {
+    shuffleArray(next.options).forEach(option => {
         const button = document.createElement("button");
         button.innerText = option;
         button.className = "quizButton";
